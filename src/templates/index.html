@@ -1,0 +1,23 @@
+{% extends './layout.html'%}
+
+{%block title %} {{ data.titulo }} {%endblock%}
+
+{%block body%} 
+
+
+<div id="contenedor_global">
+    <h1> {{ data.bienvenida }}</h1>
+    <h2> </h2>
+
+    {% if data.numero_cursos > 0 %}
+    <ul>
+        {% for curso in data.cursos %}
+        <li> {{ curso }} </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>No hay cursos</h2>
+    {% endif %}
+</div>
+
+{%endblock%}
